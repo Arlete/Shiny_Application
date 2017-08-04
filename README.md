@@ -10,6 +10,6 @@ This is part of the "Developing Data Products" week4 assignment from Coursera. T
   - Push the presentation to github or Rpubs
   
 The shiny application is available on https://arlete.shinyapps.io/Shiny_Application/.
-The presentation is available at Rpubs (), and the code file is also is this github repo.
+The presentation is available at Rpubs (http://rpubs.com/Arlete/296662), and the code file is also in this github repo.
 
 
