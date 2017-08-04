@@ -1,0 +1,67 @@
+Shiny Application and Reproducible Pitch
+========================================================
+author: Arlete Rodrigues
+date: August 4, 2017
+autosize: true
+
+
+<style>
+
+/* slide titles */
+.reveal h3 { 
+  font-size: 50px;
+  color: Brown;
+}
+
+/* ordered and unordered list styles */
+.reveal ul, 
+.reveal ol {
+    font-size: 25px;
+    color: grey;
+    list-style-type: circle;
+}
+
+</style>
+
+
+Overview
+========================================================
+
+This presentation is part of the "Developing Data Products" course from Coursera.
+
+Objectives:
+- Create a shiny application and deploy it on Rstudio's shiny server.
+- Share ui.R and server.R code files on github
+- Use Rstudio Presenter to prepare a reproducible pitch presentation about the Shiny application:
+  - Create 5 slides to pitch the idea done in Rstudio Presenter
+  - Push the presentation to github or Rpubs
+
+Source Code and Shiny Application
+========================================================
+
+Source code for ui.R and server.R are available on: https://github.com/Arlete/Shiny_Application
+
+Shiny Application is available on: https://arlete.shinyapps.io/Shiny_Application/
+
+The application uses the iris data set to perform a comparison, by iris species, between their characteristics. The results are the correlation between the selected variables and the respective plot.
+- The available characteristics are: sepal length, sepal width, petal length and petal width.
+- The three available species are: setosa, versicolor, and virginica. 
+
+Shiny Application - Iris Data Set Summary
+========================================================
+<small style="font-size:.7em">
+```{r, echo=FALSE}
+summary(iris)
+```
+</small>
+
+Shiny Application - An Example
+========================================================
+
+This analysis compares the sepal width and length from setosa iris species.
+<small style="font-size:.5em">
+```{r,fig.align='center',fig.width=8,fig.height=4,dpi=300,out.width="800px",out.height="350px"}
+plot(iris[1:50,2], iris[1:50,1], "p",pch=16, main=substitute(paste(bolditalic('Iris Data: Sepal Width vs Sepal Length'))), xlab=substitute(paste(bold('Sepal Width'))),ylab= substitute(paste(bold('Sepal Length'))), col="orange")
+ paste("Correlation Value: ", cor(iris[1:50,2], iris[1:50,1]))
+```
+</small>
